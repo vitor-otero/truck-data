@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 10px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.box, .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.hidden { display: none; }
+
+input[type="text"], input[type="password"], input[type="number"], input[type="file"], input[type="date"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover { background-color: #0056b3; }
+
+.logout {
+    background-color: #dc3545;
+}
+.logout:hover { background-color: #a71d2a; }
+
+#lista_atividades {
+    list-style: none;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-left: 0;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+#lista_atividades li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.mensagem {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+label { font-weight: bold; display: block; margin-bottom: 5px; }
+
+@media screen and (max-width: 480px) {
+    .container { padding: 5px; }
+    h1, h2 { font-size: 20px; }
+    input, select, button { font-size: 16px; padding: 10px; }
+    #lista_atividades { max-height: 200px; }
+}
+
+/* Bandeiras */
+.localizacao-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.flag-btn {
+    font-size: 28px;
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 5px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.flag-btn:hover { border-color: #007BFF; }
+.flag-btn.selected {
+    border-color: #007BFF;
+    background-color: #e0f0ff;
+}
+/* ... restante do CSS anterior ... */
+
+/* Bandeiras */
+.localizacao-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.flag-btn {
+    font-size: 28px;
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 5px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.flag-btn:hover { border-color: #007BFF; }
+.flag-btn.selected {
+    border-color: #007BFF;
+    background-color: #e0f0ff;
+}
+
+/* Botões de filtro lado a lado */
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.filter-buttons button {
+    width: 48%;
+}

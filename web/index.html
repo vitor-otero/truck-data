@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard de Atividades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="login-box" class="box">
+        <h1>Login</h1>
+        <input type="text" id="login_nome" placeholder="Nome">
+        <input type="password" id="login_senha" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <p id="msg_login" class="mensagem"></p>
+        <hr>
+        <h2>Registrar Novo Usuário</h2>
+        <input type="text" id="novo_nome" placeholder="Nome">
+        <input type="password" id="nova_senha" placeholder="Senha">
+        <button onclick="registrarUsuario()">Registrar</button>
+        <p id="msg_usuario" class="mensagem"></p>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <h1>Olá, <span id="nome_usuario"></span></h1>
+
+        <section class="card">
+            <h2>Registrar Atividade</h2>
+            <div class="localizacao-box">
+                <button id="btn-PT" class="flag-btn selected" onclick="selecionarLocal('PT')">🇵🇹</button>
+                <button id="btn-ES" class="flag-btn" onclick="selecionarLocal('ES')">🇪🇸</button>
+            </div>
+            <input type="text" id="nome_local" placeholder="Nome do local">
+            <select id="tipo_codigo"></select>
+            <input type="number" id="kilometragem" placeholder="Kilometragem">
+            <input type="file" id="foto">
+            <button onclick="registrarAtividade()">Registrar</button>
+            <p id="msg_atividade" class="mensagem"></p>
+        </section>
+
+        <section class="card">
+            <h2>Filtrar Atividades</h2>
+            <label>Data Início:</label>
+            <input type="date" id="filtro_data_inicio">
+            <label>Data Fim:</label>
+            <input type="date" id="filtro_data_fim">
+            <label>Tipos de Atividade:</label>
+            <select id="filtro_tipos" multiple></select>
+            <div class="filter-buttons">
+                <button onclick="listarAtividades()">Filtrar</button>
+                <button onclick="removerFiltros()">Remover filtros</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Minhas Atividades</h2>
+            <ul id="lista_atividades"></ul>
+            <button onclick="exportarCSV()">Exportar CSV</button>
+        </section>
+
+        <button class="logout" onclick="logout()">Sair</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
