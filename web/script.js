@@ -1,4 +1,4 @@
-const BASE_URL = "http://10.0.0.18:8000"; // Substitua pelo IP do servidor
+const BASE_URL = "http://217.72.207.97:8000"; // Substitua pelo IP do servidor
 let usuario = null;
 let senha = null;
 let localizacao = "PT"; // Sempre pre-selecionado Portugal
